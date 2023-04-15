@@ -8,7 +8,7 @@ const Navbar = () => {
     <>
       <div className="flex flex-row justify-between w-full">
         <h1 className="text-2xl font-bold ">Dashboard</h1>
-        <div className="flex flex-row justify-between items-center w-6/12 max-lg:w-6/12">
+        <div className="flex flex-row justify-between items-center w-4/12 max-lg:w-6/12">
           <div className="search flex flex-row items-center">
             <input
               type="search"

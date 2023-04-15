@@ -6,7 +6,7 @@ import { BsCashCoin } from "react-icons/bs";
 const CardList = () => {
   return (
     <>
-      <div className="card-list mt-10 flex flex-row justify-between flex-wrap max-md:justify-center ">
+      <div className="card-list mt-5 flex flex-row justify-between flex-wrap max-md:justify-center ">
         <div className="card bg-liteGreen w-52 max-md:w-80 p-5 rounded-xl flex flex-row justify-between max-lg:mt-5">
           <div>
             <p className="text-sm">Total Revenue</p>

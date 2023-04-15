@@ -11,7 +11,10 @@ module.exports = {
       liteGreen : '#DDEFE0',
       liteOrange : '#F4ECDD',
       liteRed : '#EFDADA',
-      liteBlue : '#DEE0EF'
+      liteBlue : '#DEE0EF',
+      green : '#9BDD7C',
+      voilet : '#6972C3',
+      grayOrg : '#808080'
 
     },
     extend: {},

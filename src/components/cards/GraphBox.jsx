@@ -1,11 +1,12 @@
 import React from "react";
 
 import { BsFillCircleFill } from "react-icons/bs";
+import Graph from "../graphs/Graph";
 
 const GraphBox = () => {
   return (
     <>
-      <div className="mt-10 bg-white p-5 rounded-xl">
+      <div className="mt-5 bg-white p-5 rounded-xl">
         <div className="flex flex-row justify-between">
           <div className="w-2/12">
             <p className="font-bold text-lg">Activities</p>
@@ -31,6 +32,7 @@ const GraphBox = () => {
             </div>
           </div>
         </div>
+        <Graph />
       </div>
     </>
   );
