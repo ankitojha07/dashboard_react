@@ -24,7 +24,7 @@ const LoginPage = () => {
             </h4>
             <div className="auth-btn flex md:flex-row justify-around mt-4 w-full flex-col">
               <button className="text-sm w-full bg-white text-gray-400 rounded-md px-4 py-1 mt-3 flex flex-row items-center ">
-                <FcGoogle className="mr-2" /> Sign in with Apple
+                <FcGoogle className="mr-2" /> Sign in with Google
               </button>
               <button className="text-sm w-full bg-white text-gray-400 rounded-md px-4 py-1 md:ml-5 mt-3 flex flex-row items-center ">
                 <AiFillApple className="mr-2" /> Sign in with Apple
