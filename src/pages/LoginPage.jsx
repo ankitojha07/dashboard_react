@@ -4,6 +4,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 import { FcGoogle } from "react-icons/fc";
 import { AiFillApple } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   const { loginWithRedirect } = useAuth0();
@@ -22,7 +23,10 @@ const LoginPage = () => {
               Sign in to your account
             </h4>
             <div className="auth-btn flex md:flex-row justify-around mt-4 w-full flex-col">
-              <button className="text-xs w-full bg-white text-gray-400 rounded-md px-4 py-1 mt-3 flex flex-row items-center ">
+              <button
+                className="text-xs w-full bg-white text-gray-400 rounded-md px-4 py-1 mt-3 flex flex-row items-center "
+                onClick={(e) => loginWithRedirect()}
+              >
                 <FcGoogle className="mr-2" /> Sign in with Google
               </button>
               <button className="text-xs w-full bg-white text-gray-400 rounded-md px-4 py-1 md:ml-5 mt-3 flex flex-row items-center ">
@@ -48,12 +52,12 @@ const LoginPage = () => {
                 Forgot password?
               </h6>
 
-              <button
+              <Link
                 className="py-2 bg-black text-white w-full mt-3 rounded-lg"
-                onClick={(e) => loginWithRedirect()}
+                to="/home"
               >
                 Sign In
-              </button>
+              </Link>
             </div>
             <div className="flex flex-row justify-center w-full mt-2">
               <h6 className="font-lato font-medium text-sm text-gray-500">
