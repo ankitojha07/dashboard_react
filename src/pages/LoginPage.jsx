@@ -1,11 +1,13 @@
 import React from "react";
 import "./login.css";
+import { useAuth0 } from "@auth0/auth0-react";
 
 import { FcGoogle } from "react-icons/fc";
 import { AiFillApple } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const LoginPage = () => {
+  const { user, loginWithRedirect } = useAuth0();
   return (
     <>
       <div className=" bg-gray flex md:flex-row md:justify-around  justify-around  h-screen items-center flex-col">
@@ -46,12 +48,13 @@ const LoginPage = () => {
               <h6 className="font-lato text-sm font-medium mt-3 text-blue">
                 Forgot password?
               </h6>
-              <Link
+
+              <button
                 className="py-2 bg-black text-white w-full mt-3 rounded-lg"
-                to="/home"
+                onClick={(e) => loginWithRedirect()}
               >
                 Sign In
-              </Link>
+              </button>
             </div>
             <div className="flex flex-row justify-center w-full mt-2">
               <h6 className="font-lato font-medium text-sm text-gray-500">
