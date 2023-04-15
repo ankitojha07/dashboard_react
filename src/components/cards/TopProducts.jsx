@@ -6,7 +6,7 @@ import { BsFillCircleFill } from "react-icons/bs";
 const TopProducts = () => {
   return (
     <>
-      <div className="w-5/12 bg-white p-5 rounded-xl">
+      <div className="w-5/12 bg-white p-5 rounded-xl max-md:w-full">
         <div className="title flex flex-row justify-between">
           <p className="text-sm font-bold">Top Products</p>
           <select

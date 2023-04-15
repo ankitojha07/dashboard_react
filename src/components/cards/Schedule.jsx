@@ -5,7 +5,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 const Schedule = () => {
   return (
     <>
-      <div className="w-5/12 bg-white p-5 rounded-xl">
+      <div className="w-5/12 bg-white p-5 rounded-xl max-md:w-full">
         <div className="title flex flex-row justify-between items-center">
           <p className="font-bold text-sm">Today’s schedule</p>
           <div className="flex flex-row">

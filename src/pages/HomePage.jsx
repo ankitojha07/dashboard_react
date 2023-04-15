@@ -16,7 +16,7 @@ const HomePage = () => {
           <Navbar />
           <CardList />
           <GraphBox />
-          <div className="flex flex-row justify-between mt-5">
+          <div className="flex flex-row justify-between mt-5 max-md:flex-col">
             <TopProducts />
             <Schedule />
           </div>
