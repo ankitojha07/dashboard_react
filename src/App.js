@@ -1,10 +1,16 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import LoginPage from "./components/LoginPage";
+import HomePage from "./components/HomePage";
 
 function App() {
   return (
-    <div className="App flex justify-center">
-      <h1 className="text-3xl text-blue-300">Hello</h1>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" exact Component={LoginPage}></Route>
+        <Route path="/home" Component={HomePage}></Route>
+      </Routes>
+    </>
   );
 }
 
