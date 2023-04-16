@@ -9,7 +9,7 @@ import { AiOutlineSetting } from "react-icons/ai";
 const SideBar = () => {
   return (
     <>
-      <div className="w-3/12 flex justify-center max-sm:w-3/12 ">
+      <div className="w-3/12 flex justify-center max-sm:w-2/12 ">
         <div className="sidebar w-11/12 max-2xl:w-9/12 max-md:w-full bg-black  rounded-3xl p-5 text-white flex flex-col justify-around ">
           <h1 className="text-3xl font-bold w-full mt-10 max-sm:hidden">
             Board.
