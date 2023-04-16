@@ -14,7 +14,7 @@ const LoginPage = () => {
             Board.
           </h1>
         </div>
-        <div className=" md:w-9/12 bg-gray text-center flex justify-center items-center w-full mt-10">
+        <div className=" md:w-9/12 bg-gray text-center flex justify-center items-center w-full">
           <div className="flex flex-col items-start max-md:w-9/12 ">
             <h1 className="text-3xl font-bold">Sign In</h1>
             <h4 className="font-lato mt-1 font-regular tracking-wide text-sm">
