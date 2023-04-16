@@ -14,7 +14,9 @@ const SideBar = () => {
           <h1 className="text-3xl font-bold w-full mt-10 max-sm:hidden">
             Board.
           </h1>
-          <h1 className="text-xl font-bold w-full mt-10">B.</h1>
+          <h1 className="text-xl font-bold w-full mt-10 justify-center max-sm:visible">
+            B.
+          </h1>
           <div className="nav-links h-4/6 flex flex-col justify-start">
             <div className="nav-link flex w-8/12 justify-start items-center max-sm:justify-center max-sm:w-full">
               <GoDashboard className="mr-2" />
@@ -42,7 +44,7 @@ const SideBar = () => {
             <h5 className="text-xs">Help</h5>
             <h5 className="text-xs mt-2">Contact Us</h5>
           </div>
-          <div className="nav-bottom">
+          <div className="nav-bottom max-sm:visible">
             <AiOutlineSetting className="mt-5" />
             <AiOutlineSetting className="mt-5" />
           </div>
