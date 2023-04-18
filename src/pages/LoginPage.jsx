@@ -1,9 +1,32 @@
 import React from "react";
 import "./login.css";
 
+// import { getDatabase, ref, set } from "firebase/database";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+
+import { app } from "../firebase";
+
 import { FcGoogle } from "react-icons/fc";
 import { AiFillApple } from "react-icons/ai";
 import { Link } from "react-router-dom";
+
+// testing realtime database connection
+
+// const db = getDatabase(app);
+
+// const putData = () => {
+//   set(ref(db, "users/ankit"), {
+//     id: 1,
+//     name: "Ankit",
+//     age: 22,
+//   });
+// };
+const auth = getAuth(app);
+const googleAuthProvider = new GoogleAuthProvider();
+
+const signInWithGoogle = () => {
+  signInWithPopup(auth, googleAuthProvider);
+};
 
 const LoginPage = () => {
   return (
@@ -20,11 +43,14 @@ const LoginPage = () => {
             <h4 className="font-lato mt-1 font-regular tracking-wide text-sm">
               Sign in to your account
             </h4>
-            <div className="auth-btn flex md:flex-row justify-around mt-4 w-full flex-col">
-              <button className="text-xs w-full bg-white text-gray-400 rounded-md px-4 py-1 mt-3 flex flex-row items-center max-md:h-10 ">
+            <div className="auth-btn flex md:flex-row justify-center mt-4 w-full flex-col">
+              <button
+                className="text-xs  bg-white text-gray-400 rounded-md px-4 py-1 mt-3 h-10 flex flex-row items-center  "
+                onClick={signInWithGoogle}
+              >
                 <FcGoogle className="mr-2" /> Sign in with Google
               </button>
-              <button className="text-xs w-full bg-white text-gray-400 rounded-md px-4 py-1 md:ml-5 mt-3 flex flex-row items-center max-md:h-10">
+              <button className="text-xs  bg-white text-gray-400 rounded-md px-4 py-1 md:ml-5 mt-3 flex flex-row items-center h-10">
                 <AiFillApple className="mr-2" /> Sign in with Apple
               </button>
             </div>
@@ -50,6 +76,7 @@ const LoginPage = () => {
               <Link
                 className="py-2 bg-black text-white w-full mt-3 rounded-lg"
                 to="/home"
+                // onClick={putData}
               >
                 Sign In
               </Link>
