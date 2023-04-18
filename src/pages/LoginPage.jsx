@@ -3,14 +3,13 @@ import "./login.css";
 
 // import { getDatabase, ref, set } from "firebase/database";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-import {
-  getFirestore,
-  query,
-  getDocs,
-  collection,
-  where,
-  addDoc,
-} from "firebase/firestore";
+import // getFirestore,
+// query,
+// getDocs,
+// collection,
+// where,
+// addDoc,
+"firebase/firestore";
 
 import { app } from "../firebase";
 
@@ -29,24 +28,25 @@ import { Link } from "react-router-dom";
 //     age: 22,
 //   });
 // };
-const db = getFirestore(app);
+// const db = getFirestore(app);
 const auth = getAuth(app);
 const googleAuthProvider = new GoogleAuthProvider();
 
-const signInWithGoogle = async () => {
+const signInWithGoogle = () => {
   try {
-    const res = await signInWithPopup(auth, googleAuthProvider);
-    const user = res.user;
-    const q = query(collection(db, "users"), where("uid", "==", user.uid));
-    const docs = await getDocs(q);
-    if (docs.docs.length === 0) {
-      await addDoc(collection(db, "users"), {
-        uid: user.uid,
-        authProvider: "google",
-        name: user.name,
-        email: user.email,
-      });
-    }
+    // const res = await
+    signInWithPopup(auth, googleAuthProvider);
+    // const user = res.user;
+    // const q = query(collection(db, "users"), where("uid", "==", user.uid));
+    // const docs = await getDocs(q);
+    // if (docs.docs.length === 0) {
+    //   await addDoc(collection(db, "users"), {
+    //     uid: user.uid,
+    //     authProvider: "google",
+    //     name: user.name,
+    //     email: user.email,
+    //   });
+    // }
   } catch (e) {
     console.error(e);
     alert("an Error occured, please try again!");
