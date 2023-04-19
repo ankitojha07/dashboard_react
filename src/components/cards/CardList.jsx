@@ -8,7 +8,10 @@ const CardList = () => {
         {cardData.map((data) => {
           return (
             <>
-              <div className="card bg-liteGreen w-52 max-md:w-80 p-5 rounded-xl flex flex-row justify-between max-lg:mt-5">
+              <div
+                className="car w-52 max-md:w-80 p-5 rounded-xl flex flex-row justify-between max-lg:mt-5"
+                style={{ backgroundColor: data.color }}
+              >
                 <div>
                   <p className="text-sm">{data.title}</p>
                   <p className="text-xl font-bold">{data.numeric}</p>
