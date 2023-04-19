@@ -1,5 +1,6 @@
 import React from "react";
 import "./login.css";
+import { useNavigate } from "react-router-dom";
 
 // import { getDatabase, ref, set } from "firebase/database";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
@@ -47,11 +48,16 @@ const signInWithGoogle = async () => {
     }
   } catch (e) {
     console.error(e);
-    alert("an Error occured, please try again!");
   }
 };
 
 const LoginPage = () => {
+  let navigate = useNavigate();
+  const routeChange = async () => {
+    await signInWithGoogle();
+    let path = "home";
+    navigate(path);
+  };
   return (
     <>
       <div className=" bg-gray flex md:flex-row md:justify-around  justify-evenly  h-screen items-center  flex-col">
@@ -69,7 +75,7 @@ const LoginPage = () => {
             <div className="auth-btn flex md:flex-row justify-center mt-4 w-full flex-col">
               <button
                 className="text-xs  bg-white text-gray-400 rounded-md px-4 py-1 mt-3 h-10 flex flex-row items-center  "
-                onClick={signInWithGoogle}
+                onClick={routeChange}
               >
                 <FcGoogle className="mr-2" /> Sign in with Google
               </button>
