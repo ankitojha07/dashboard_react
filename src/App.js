@@ -9,8 +9,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" exact Component={LoginPage}></Route>
-        <Route path="/home" exact Component={HomePage}></Route>
-        <Route path="/pi" exact Component={PiChart}></Route>
+        <Route path="/home" Component={HomePage}></Route>
       </Routes>
     </>
   );

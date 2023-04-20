@@ -5,6 +5,7 @@ const CardList = () => {
   return (
     <>
       <div className="card-list mt-5 flex flex-row justify-between flex-wrap max-md:justify-center">
+        {/* mapping component from cardList data  */}
         {cardData.map((data) => {
           return (
             <>
