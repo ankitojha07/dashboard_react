@@ -44,9 +44,9 @@ const SideBar = () => {
             <h5 className="text-xs">Help</h5>
             <h5 className="text-xs mt-2">Contact Us</h5>
           </div>
-          <div className="nav-link flex flex-col w-8/12 justify-start max-md:justify-center items-center mt-5 max-md:w-full hidden">
-            <AiOutlineSetting className="mt-5" />
-            <AiOutlineSetting className="mt-5" />
+          <div className="nav-link flex flex-col w-8/12 justify-start max-md:justify-center items-center mt-5 max-md:w-full ">
+            <AiOutlineSetting className="mt-5 md:hidden" />
+            <AiOutlineSetting className="mt-5 md:hidden" />
           </div>
         </div>
       </div>
