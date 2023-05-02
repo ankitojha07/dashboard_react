@@ -2,7 +2,6 @@ import React from "react";
 import "./login.css";
 import { useNavigate } from "react-router-dom";
 
-// import { getDatabase, ref, set } from "firebase/database";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import {
   getFirestore,
@@ -14,22 +13,11 @@ import {
 } from "firebase/firestore";
 
 import { app } from "../firebase";
-
 import { FcGoogle } from "react-icons/fc";
 import { AiFillApple } from "react-icons/ai";
-import { Link } from "react-router-dom";
 
-// testing realtime database connection
-// const db = getDatabase(app);
-// const putData = () => {
-//   set(ref(db, "users/ankit"), {
-//     id: 1,
-//     name: "Ankit",
-//     age: 22,
-//   });
-// };
-const db = getFirestore(app);
 const auth = getAuth(app);
+const db = getFirestore(app);
 const googleAuthProvider = new GoogleAuthProvider();
 
 const signInWithGoogle = async () => {
@@ -58,15 +46,21 @@ const LoginPage = () => {
     let path = "home";
     navigate(path);
   };
+
+  const signIn = () => {
+    let path = "home";
+    navigate(path);
+  };
+
   return (
     <>
-      <div className=" bg-gray flex md:flex-row md:justify-around  justify-evenly  h-screen items-center  flex-col">
-        <div className="md:w-6/12 md:bg-black text-white max-md:text-white max-md:px-10 max-md:py-12 flex justify-center items-center max-md:bg-black max-md:rounded-2xl  max-md:w-9/12">
+      <div className=" bg-gray flex md:flex-row h-screen items-center flex-col max-md:justify-evenly">
+        <div className="md:w-9/12 md:bg-black text-white max-md:text-white max-md:px-10 max-md:py-12 flex justify-center items-center max-md:bg-black max-md:rounded-2xl  max-md:w-9/12">
           <h1 className="text-4xl flex font-bold md:h-screen items-center max-md:items-start ">
             Board.
           </h1>
         </div>
-        <div className=" md:w-9/12 bg-gray text-center flex justify-center items-center w-full">
+        <div className=" bg-gray text-center flex justify-center items-center w-full">
           <div className="flex flex-col items-start max-md:w-9/12 ">
             <h1 className="text-3xl font-bold">Sign In</h1>
             <h4 className="font-lato mt-1 font-regular tracking-wide text-sm">
@@ -83,33 +77,39 @@ const LoginPage = () => {
                 <AiFillApple className="mr-2" /> Sign in with Apple
               </button>
             </div>
-            <div className="form w-full rounded-xl flex flex-col justify-start items-start mt-4 bg-white p-4">
-              <h6 className="font-lato text-sm font-medium">Email address</h6>
+            <form
+              name="myform"
+              className="form w-full rounded-xl flex flex-col justify-start items-start mt-4 bg-white p-4"
+            >
+              <label className="font-lato text-sm font-medium">
+                Email address
+              </label>
               <input
                 type="email"
-                name=""
-                id=""
+                name="email"
+                id="email"
                 className="bg-gray rounded-lg mt-1 w-full p-2"
               />
-              <h6 className="font-lato text-sm font-medium mt-3">Password</h6>
+              <label className="font-lato text-sm font-medium mt-3">
+                Password
+              </label>
               <input
                 type="password"
-                name=""
-                id=""
+                name="pass"
+                id="pass"
                 className="bg-formCol rounded-lg mt-1 w-full p-2"
               />
-              <h6 className="font-lato text-sm font-medium mt-3 text-blue">
+              <h6 className="font-lato text-sm font-medium mt-3 text-blue cursor-pointer">
                 Forgot password?
               </h6>
 
-              <Link
+              <button
                 className="py-2 bg-black text-white w-full mt-3 rounded-lg"
-                to="/home"
-                // onClick={putData}
+                onClick={signIn}
               >
                 Sign In
-              </Link>
-            </div>
+              </button>
+            </form>
             <div className="flex flex-row justify-center w-full mt-2">
               <h6 className="font-lato font-medium text-sm text-gray-500">
                 Don't have an account?

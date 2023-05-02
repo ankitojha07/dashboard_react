@@ -28,7 +28,7 @@ const data = [
   },
 ];
 
-const Graph = () => {
+const Graph = (props) => {
   return (
     <>
       <ResponsiveContainer width="90%" height="70%" className="mt-5">
@@ -46,12 +46,7 @@ const Graph = () => {
           <XAxis dataKey="name" />
           <YAxis />
 
-          <Line
-            type="monotone"
-            dataKey="pv"
-            stroke="#8884d8"
-            activeDot={{ r: 8 }}
-          />
+          <Line type="monotone" dataKey="pv" stroke="#8884d8" />
           <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
         </LineChart>
       </ResponsiveContainer>
