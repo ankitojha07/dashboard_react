@@ -13,10 +13,10 @@ const Schedule = () => {
             <MdKeyboardArrowRight className="text-grayOrg" />
           </div>
         </div>
-        <ul className=" h-40 overflow-y-scroll">
+        <div className=" ">
           {ScheduleData.map((data) => {
             return (
-              <li>
+              <>
                 <div
                   className="card mt-5 border-l-4  px-2"
                   style={{ borderColor: data.color }}
@@ -25,10 +25,10 @@ const Schedule = () => {
                   <p className="text-xs mt-1">{data.time}</p>
                   <p className="text-xs mt-1">{data.location} </p>
                 </div>
-              </li>
+              </>
             );
           })}
-        </ul>
+        </div>
         {/* <div className="card mt-5 border-l-4 border-green px-2">
           <p className="text-xs font-bold ">
             Meeting with suppliers from Kuta Bali
