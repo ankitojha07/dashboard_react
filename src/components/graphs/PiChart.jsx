@@ -1,7 +1,11 @@
 import React from "react";
 import { VictoryPie } from "victory-pie";
 
-const myData = [{ y: 14 }, { y: 31 }, { y: 55 }];
+const myData = [
+  { x: [], y: 14 },
+  { x: [], y: 31 },
+  { x: [], y: 55 },
+];
 
 const PiChart = () => {
   return (

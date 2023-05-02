@@ -1,6 +1,6 @@
 import React from "react";
-
 import { MdKeyboardArrowRight } from "react-icons/md";
+import ScheduleData from "../../data/schedule";
 
 const Schedule = () => {
   return (
@@ -8,25 +8,34 @@ const Schedule = () => {
       <div className="w-5/12 bg-white p-5 rounded-xl max-md:w-full">
         <div className="title flex flex-row justify-between items-center">
           <p className="font-bold text-sm">Today’s schedule</p>
-          <div className="flex flex-row">
+          <div className="flex flex-row cursor-pointer">
             <p className="text-xs">See All</p>
             <MdKeyboardArrowRight className="text-grayOrg" />
           </div>
         </div>
-        <div className="card mt-5 border-l-4 border-green px-2">
+        <ul className=" h-40 overflow-y-scroll">
+          {ScheduleData.map((data) => {
+            return (
+              <li>
+                <div
+                  className="card mt-5 border-l-4  px-2"
+                  style={{ borderColor: data.color }}
+                >
+                  <p className="text-xs font-bold ">{data.title}</p>
+                  <p className="text-xs mt-1">{data.time}</p>
+                  <p className="text-xs mt-1">{data.location} </p>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+        {/* <div className="card mt-5 border-l-4 border-green px-2">
           <p className="text-xs font-bold ">
             Meeting with suppliers from Kuta Bali
           </p>
           <p className="text-xs mt-1">14.00-15.00</p>
           <p className="text-xs mt-1">at Sunset Road, Kuta, Bali </p>
-        </div>
-        <div className="card mt-2 border-l-4 border-voilet px-2">
-          <p className="text-xs font-bold ">
-            Check operation at Giga Factory 1
-          </p>
-          <p className="text-xs  mt-1">18.00-20.00</p>
-          <p className="text-xs  mt-1">at Central Jakarta </p>
-        </div>
+        </div> */}
       </div>
     </>
   );
