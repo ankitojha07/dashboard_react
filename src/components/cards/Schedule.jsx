@@ -5,7 +5,7 @@ import ScheduleData from "../../data/schedule";
 const Schedule = () => {
   return (
     <>
-      <div className="w-6/12 bg-white p-5 rounded-xl max-md:w-full">
+      <div className="w-6/12 bg-white p-1 rounded-xl max-md:w-full">
         <div className="title flex flex-row justify-between items-center">
           <p className="font-bold text-sm">Today’s schedule</p>
           <div className="flex flex-row cursor-pointer">

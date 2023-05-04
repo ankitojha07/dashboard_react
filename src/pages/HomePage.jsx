@@ -22,7 +22,7 @@ const HomePage = () => {
 
           <div className="overflow-x-scroll">
             <GraphBox />
-            <div className="flex flex-row justify-between mt-5 max-md:flex-col gap-3 ">
+            <div className="flex flex-row justify-between max-md:flex-col gap-3 ">
               <TopProducts />
               <Schedule />
             </div>
