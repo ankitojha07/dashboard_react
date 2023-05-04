@@ -4,7 +4,7 @@ import { cardData } from "../../data/card";
 const CardList = () => {
   return (
     <>
-      <ul className="card-list mt-5 flex flex-row w-full overflow-y-scroll gap-5 visible">
+      <ul className="card-list flex flex-row w-full overflow-y-scroll gap-5 visible">
         {cardData.map((data) => {
           return (
             <li>
