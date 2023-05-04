@@ -7,7 +7,7 @@ import Dropdown from "./Dropdown";
 const GraphBox = () => {
   return (
     <>
-      <div className="mt-5 bg-white p-5 rounded-xl h-80">
+      <div className="bg-white p-3 rounded-xl h-80">
         <div className="flex flex-row justify-between">
           <div className="w-2/12">
             <p className="font-bold text-lg">Activities</p>
