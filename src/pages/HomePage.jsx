@@ -20,7 +20,7 @@ const HomePage = () => {
             </li>
           </ul>
 
-          <div className="overflow-x-scroll">
+          <div className="overflow-x-scroll flex flex-col gap-2">
             <GraphBox />
             <div className="flex flex-row justify-between max-md:flex-col gap-3 ">
               <TopProducts />
