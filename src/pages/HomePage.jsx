@@ -10,13 +10,19 @@ import Schedule from "../components/cards/Schedule";
 const HomePage = () => {
   return (
     <>
-      <div className="flex flex-row justify-center h-screen w-full p-5 bg-gray max-sm:p-4 ">
+      <div className="flex flex-row h-screen w-full p-5 bg-gray ">
         <SideBar />
-        <div className="w-9/12  rounded-3xl p-5 max-md:w-full flex flex-col ">
+        <div className="w-9/12  rounded-3xl p-5  flex flex-col max-md:overflow-x-scroll ">
           <Navbar />
-          <CardList />
+          <ul>
+            <li>
+              <CardList />
+            </li>
+          </ul>
+
           <GraphBox />
-          <div className="flex flex-row justify-between mt-5 max-md:flex-col">
+
+          <div className="flex flex-row justify-between mt-5 max-md:flex-col gap-5 ">
             <TopProducts />
             <Schedule />
           </div>

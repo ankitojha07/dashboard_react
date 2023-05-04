@@ -7,13 +7,13 @@ import Dropdown from "./Dropdown";
 const GraphBox = () => {
   return (
     <>
-      <div className="mt-5 bg-white p-5 rounded-xl max-md:w-full">
+      <div className="mt-5 bg-white p-5 rounded-xl ">
         <div className="flex flex-row justify-between">
           <div className="w-2/12">
             <p className="font-bold text-lg">Activities</p>
             <Dropdown />
           </div>
-          <div className="flex flex-row w-3/12 justify-around">
+          <div className="flex flex-row w-2/12 justify-around max-md:flex-col">
             <div className="flex flex-row items-center">
               <BsFillCircleFill className="text-liteRed" />
               <p className="text-xs ml-2">Guest</p>
