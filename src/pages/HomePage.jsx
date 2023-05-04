@@ -10,7 +10,7 @@ import Schedule from "../components/cards/Schedule";
 const HomePage = () => {
   return (
     <>
-      <div className="flex flex-row h-screen w-full p-5 bg-gray ">
+      <div className="flex flex-row h-screen w-full p-5 bg-gray overflow-hidden ">
         <SideBar />
         <div className="w-full  rounded-3xl p-5  flex flex-col ">
           <Navbar />
