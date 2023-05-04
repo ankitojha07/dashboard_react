@@ -46,7 +46,7 @@ const Graph = (props) => {
           <XAxis dataKey="name" />
           <YAxis />
 
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" />
+          <Line type="monotone" dataKey="pv" stroke="#EFDADA" />
           <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
         </LineChart>
       </ResponsiveContainer>
